@@ -87,5 +87,45 @@ Eu pressumo que seja o mesmo que usar innerHTML.
 
 ```js
 const root = document.querySelector("#root");
-root.innerHTML = <div>Hi there!</div>;
+root.innerHTML = "<div>Hi there!</div>";
+```
+
+## Fundamentos - O que é JSX?
+
+**JavaScript XML (JSX)** é uma forma de exibir templates para o desenvolvedor ter melhor compreensão do código que está sendo produzido. JSX permite inserir a mesma sintaxe do HTML no React, no entanto, essa sintaxe não é válida para navegadores e é aqui que Babel faz essa conversão. Babel não só converte JSX como também permite a conversão de ES6+ para ES5, permitindo que navegadores mais antigos possam reconhecer funcionalidades mais modernas do JavaScript.
+
+No final, o que estaremos enviando para o navegador é uma versão do Babel de JavaScript, pois os navegadores não reconhecem a sintaxe JSX.
+
+```html
+
+<h1>My Header</h1>
+<p>My paragraph>
+<button>My button</button>
+```
+
+### JSX com Inline Style e Internal Style
+
+Mesmo que JSX se assemelhe com HTML, funções como Inline Style ou Internal Style não funcionarão da mesma forma em React. Existe também uma diferença de sintaxe quando o assunto é styling. A mesma coisa acontece com a atribuíção de Classes. Todos possuem sintaxe diferentes do padrão HTML.
+
+#### Exemplo de Inline Style
+
+```html
+<!--HTML-->
+
+<div style="background-color:red;"></div>
+```
+
+```js
+//JSX
+
+<div style={{backgroundColor:"red"}}></div>
+```
+
+Ainda usamos style em JSX, porém colocamos a propriedade do CSS em duas chaves e desta vez usamos camelCase. A primeira chave diz ao JavaScript que se trata de uma variável, a segunda é a forma do React usar Inline Style. É apenas um objeto com a propriedade backgroundColor e o valor "red" em forma de string.
+
+Pressumo que seja mais ou menos assim com DOM e JS:
+
+```js
+
+document.getElementsByTagName("div").style.backgroundColor = "red";
 ```
