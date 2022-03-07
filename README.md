@@ -148,3 +148,33 @@ Em JSX teriamos algo como:
 ```
 
 Isso porque **class** é uma palavra reservada em JavaScript para ES6 Classes, então usamos ClassName em vez. Tudo em camelCase.
+
+### JSX com Variáveis
+
+Podemos passar variáveis pelo JSX usando chaves.
+
+```js
+function getButtonText() {
+  return "click on me!";
+}
+
+//Create a React Component
+
+//Function Component
+const App = () => {
+  //JSX
+  return (
+    <div>
+      <label className="label" for="name">
+        Enter name:
+      </label>
+      <input id="name" type="text" />
+      <button style={{ backgroundColor: "blue", color: "white" }}>
+        {getButtonText()}
+      </button>
+    </div>
+  );
+};
+```
+
+No exemplo acima, passamos uma função para o botão em JSX.
