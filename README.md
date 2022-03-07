@@ -2,6 +2,8 @@
 
 # React JS
 
+Meu estudos com React JS. Requisitos: ES6+.
+
 ## Fundamentos - Criação de um novo ambiente
 
 Criar um novo ambiente em React
