@@ -131,3 +131,20 @@ Pressumo que seja mais ou menos assim com DOM e JS:
 
 document.getElementsByTagName("div").style.backgroundColor = "red";
 ```
+
+### JSX com Classes
+
+Em HTML teriamos algo como:
+
+```html
+
+<label class="label" for="name">
+```
+
+Em JSX teriamos algo como:
+
+```js
+<label className="label" for="name">
+```
+
+Isso porque **class** é uma palavra reservada em JavaScript para ES6 Classes, então usamos ClassName em vez. Tudo em camelCase.
