@@ -2,7 +2,7 @@
 
 # React JS
 
-Meu estudos com React JS. Requisitos: ES6+.
+Meus estudos com React JS. Requisitos: HTML, CSS/SASS, ES6+.
 
 ## Fundamentos - Criação de um novo ambiente
 
