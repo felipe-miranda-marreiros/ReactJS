@@ -40,3 +40,52 @@ my-app/
 * **package.json** é o arquivo JSON que grava todas as dependências e configura nossos projetos.
 * **package-lock.json** é o arquivo JSON que grava exatamente todas as versões dos pacotes que já instalamos.
 
+<hr/>
+
+### ES6 Modules
+
+React utiliza Import e Export para ter melhorar organização de arquivos em seu ambiente de desenvolvimento, por exemplo:
+
+```js
+//Import the React and ReactDOM libraries
+
+import React from "react";
+import ReactDOM from "react-dom";
+```
+
+### Components
+
+Além disso, React trabalha com o conceito de components. Um component pode ser uma **Função** ou **Classe**. Ambas podem produzir HTML para mostrar para usuário, usando **JSX** e dessa forma também utiliza **Event Handlers**(click, drag, por exemplo) do usuário como feedback.
+
+#### Exemplo de Function Component
+
+```js
+//Create a React Component
+
+//Function Component
+const App = () => {
+  //JSX
+  return <div>Hi there!</div>;
+};
+```
+
+Exemplo acima é feito com Arrow Function.
+
+#### Utilizando ReactDOM
+
+Quando o Component estiver pronto, exibiremos para o usuário da seguinte forma:
+
+```js
+//Take the React Component and show it on the screen
+
+ReactDOM.render(<App />, document.querySelector("#root"));
+```
+
+O ID **#root** vem do arquivo **index.html** que está localizado na pasta **public**. É uma **div** vazia que futuralmente será preenchida pelo Function Component acima.
+
+Eu pressumo que seja o mesmo que usar innerHTML.
+
+```js
+const root = document.querySelector("#root");
+root.innerHTML = <div>Hi there!</div>;
+```
