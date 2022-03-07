@@ -2,7 +2,7 @@
 
 # React JS
 
-Meus estudos com React JS. Requisitos: HTML, CSS/SASS, ES6+.
+Meus estudos com React JS. </br> Requisitos: HTML, CSS/SASS, ES6+.
 
 ## Fundamentos - Criação de um novo ambiente
 
@@ -177,4 +177,31 @@ const App = () => {
 };
 ```
 
-No exemplo acima, passamos uma função para o botão em JSX.
+No exemplo acima, passamos uma função getButtonText() para o botão em JSX.
+
+### JSX com Objetos
+
+Em JSX, não podemos passar todo um objeto como variável, porém podemos passar normalmente suas propriedades, como por exemplo:
+
+```js
+//Function Component
+const App = () => {
+  //Objeto
+  const buttonText = { content: "Click" };
+  
+  //JSX
+  return (
+    <div>
+      <label className="label" for="name">
+        Enter name:
+      </label>
+      <input id="name" type="text" />
+      <button style={{ backgroundColor: "blue", color: "white" }}>
+        {buttonText.content}
+      </button>
+    </div>
+  );
+};
+```
+
+
