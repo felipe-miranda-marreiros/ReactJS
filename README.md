@@ -268,4 +268,29 @@ const CommentDetails = (props) => {
 };
 ```
 
-Pelo fato de Components serem Funções, podemos passar nos parâmetros um variável-local chamada **props**. Essa variável-local é na verdade um objeto, por isso usamos **props.author** para ter acessa a propriedade do Child Component. 
+Pelo fato de Components serem Funções, podemos passar nos parâmetros um variável-local chamada **props**. Essa variável-local é na verdade um objeto, por isso usamos **props.author** para ter acessa a propriedade do Child Component.
+
+Levando em consideração que Props são objetos, podemos passar multiplas propriedades.
+
+```js
+const CommentDetails = (props) => {
+  return (
+    <div className="comment">
+      <a href="/" className="avatar">
+        <img alt="avatar" src={props.avatar}></img>
+      </a>
+      <div className="content">
+        <a href="/" className="author">
+          {props.author}
+        </a>
+        <div className="metadata">
+          <span className="date">{props.timeAgo}</span>
+        </div>
+        <div className="text">{props.post}</div>
+      </div>
+    </div>
+  );
+};
+```
+
+**props.avatar, props.author, props.post, props.timeAgo** são multiplas propriedades sendo passadas para o component. 
