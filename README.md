@@ -220,3 +220,18 @@ Com os três conceitos em mente, precisamos seguir algumas regras para isso acon
 2. Criar um novo arquivo para esse JSX com um nome **descritivo**, por exemplo, "CommentDetails" em **PascalCase**.
 3. Por último, fazer desse Component adaptável em novos contextos usando **Props**.
 
+Depois de levarmos em consideração os passos acima, podemos usar ES6 Modules para tornar disponível esse component para o ***index.js** e então ser renderizado pelo ReactDOM.
+
+Components são tratados como JSX ou tags em React. Por exemplo:
+
+```js
+const App = () => {
+  return (
+    <div className="ui container comments">
+      <CommentDetails />
+    </div>
+  );
+};
+```
+**CommentDetails** é um component. Não confundir components com variáveis. Dessa forma também estamos fazendo **Nesting**
+
