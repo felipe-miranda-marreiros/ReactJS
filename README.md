@@ -339,15 +339,21 @@ const ApprovalCard = (props) => {
 
 React atualmente é divido em duas formas:
 
-* **Class Components**: 
-                     1. pode produzir **JSX** para mostrar conteúdo para o usuário;
-                     2. pode usar o **Lifecycle Method** para rodar código em um momento especifico da aplicação;
-                     3. pode usar **State** para atualizar o conteúdo do usuário.
+* **Class Components**
+
+ 1. pode produzir **JSX** para mostrar conteúdo para o usuário;
+                 
+ 2. pode usar o **Lifecycle Method** para rodar código em um momento especifico da aplicação;
+
+ 3. pode usar **State** para atualizar o conteúdo do usuário.
                     
-* **Function Components**: 
-                     1. pode produzir **JSX** para mostrar conteúdo para o usuário;
-                     2. pode usar **Hooks** para rodar código em um momento especifico da aplicação;
-                     3. pode usar **Hooks** para atualizar o conteúdo do usuário.
+* **Function Components**:
+
+1. pode produzir **JSX** para mostrar conteúdo para o usuário;
+                     
+2. pode usar **Hooks** para rodar código em um momento especifico da aplicação;
+       
+3. pode usar **Hooks** para atualizar o conteúdo do usuário.
 
 ### Regras para construir Class Components
 
@@ -415,12 +421,15 @@ Mas em React, usamos setState para isso acontecer.
 
 Components são estruturados da seguinte forma em Class Components:
 
-**constructor** - lugar responsável por iniciar métodos apenas uma vez.
-**render** - lugar responsável por apenas mostrar JSX.
+1. **constructor** - lugar responsável por iniciar métodos apenas uma vez.
+
+1. **render** - lugar responsável por apenas mostrar JSX.
 
 Cada component em React tem um ciclo de vida pelo  qual podemos monitorar e manipular durante suas três principais fases:
 
-**componentDidMount** -  lugar destinado para carregar dados.
-**componentDidUpdate** - lugar destinado para carregar mais dados quando state/props mudam.
-**componentWillUnmount** - lugar destinado para uso de bibliotecas externas.
+1. **componentDidMount** -  lugar destinado para carregar dados.
+
+2. **componentDidUpdate** - lugar destinado para carregar mais dados quando state/props mudam.
+
+3. **componentWillUnmount** - lugar destinado para uso de bibliotecas externas.
 
