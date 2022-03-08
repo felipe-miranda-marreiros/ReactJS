@@ -57,7 +57,7 @@ import ReactDOM from "react-dom";
 
 ### Components
 
-Além disso, React trabalha com o conceito de components. Um component pode ser uma **Função** ou **Classe**. Ambas podem produzir HTML para mostrar para usuário, usando **JSX** e dessa forma também utiliza **Event Handlers**(click, drag, por exemplo) do usuário como feedback.
+Além disso, React trabalha com o conceito de components. Um component pode ser uma **Função** ou **Classe**. Ambas podem produzir "HTML" para serem exibidos no navegador, usando **JSX** e dessa forma também utiliza **Event Handlers**(click, drag, por exemplo) do usuário como feedback.
 
 #### Exemplo de Function Component
 
@@ -204,4 +204,19 @@ const App = () => {
 };
 ```
 
+## Fundamentos - Components e Props
+
+Existem três conceitos de components em React:
+
+* Component **Nesting** - um component pode ser exibido dentro de outro component;
+* Component **Resuability** - nós queremos fazer components que possam ser reutilizados;
+* Component **Configuration** - um component deve se adequar a novos contextos.
+
+### Criando um Component
+
+Com os três conceitos em mente, precisamos seguir algumas regras para isso acontecer:
+
+1. Identificar JSX que aparecem **duplicados**;
+2. Criar um novo arquivo para esse JSX com um nome **descritivo**, por exemplo, "CommentDetails" em **PascalCase**.
+3. Por último, fazer desse Component adaptável em novos contextos usando **Props**.
 
