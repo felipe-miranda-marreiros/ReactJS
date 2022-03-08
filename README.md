@@ -361,3 +361,51 @@ React atualmente é divido em duas formas:
 * Atualizar o "state" em um component causa a renderização desse componenet.
 * State deve ser iniciado quando o component é criado.
 * Além disso, **State só pode ser atualizado usando a função SETSTATE**.
+
+#### Atualizando o State
+
+**State** é um Objeto que contém dados relevantes para um Component. Em Class Components, quando um valor do Objeto State muda, a renderização do Component também muda.
+
+Pelo fato de usarmos ES6 Classes e pelo uso da criação de uma SubClass, precisamos seguir algumas regras:
+
+1. Usar Constructor();
+2. Usar Super();
+
+```js
+//Keyword Extends
+class App extends React.Component {
+  
+  //Constructor Method
+  constructor(props) {
+  
+  //Super Method
+    super(props);
+    
+    //A Criação do State e o dado que será relevante para criação desse Component. Nós colocamos a propriedade desse Objeto State como Null, pois não sabemos ainda o dado que irá ocupar essa propriedade.
+    this.state = { lat: null };
+
+    window.navigator.geolocation.getCurrentPosition(
+      (position) => {
+      
+      //Agora que sabemos qual dado será usado no Component, usamos o método setState para reatribuir o valor do State.
+      //No caso abaixo, lat terá o valor de position.coords.latitude em vez de Null.
+        this.setState({ lat: position.coords.latitude });
+      },
+      (error) => console.log(error)
+    );
+  }
+
+//Cada Class Component deve conter obrigatoriamente um método render(). 
+  render() {
+    return <div>Latitude: {this.state.lat} </div>;
+  }
+}
+```
+
+Em Vanilla JavaScript, nós poderiamos fazer algo como:
+
+```js
+this.state = position.coords.latitude
+```
+
+Mas em React, usamos setState para isso acontecer.
