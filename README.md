@@ -235,3 +235,37 @@ const App = () => {
 ```
 **CommentDetails** é um component. Não confundir components com variáveis. Dessa forma também estamos fazendo **Nesting**
 
+### Props
+
+Props ou Propriedades é um sistema do React que permite passar dados de um Parent Component para o Child Component. Isso entra no conceito de **Component Configuration** que permite que nosso component construa dinamicidade e seja reutilizável.
+
+Exemplo do uso de Props:
+
+```js
+<CommentDetails author="Jane" />
+```
+O atributo **author** é uma propriedade que recebe uma string. No Parent Component temos:
+
+```js
+const CommentDetails = (props) => {
+
+  return (
+    <div className="comment">
+      <a href="/" className="avatar">
+        <img alt="avatar" src={faker.image.avatar()}></img>
+      </a>
+      <div className="content">
+        <a href="/" className="author">
+          {props.author}
+        </a>
+        <div className="metadata">
+          <span className="date">Today at 6:00PM</span>
+        </div>
+        <div className="text">Nice blog post!</div>
+      </div>
+    </div>
+  );
+};
+```
+
+Pelo fato de Components serem Funções, podemos passar nos parâmetros um variável-local chamada **props**. Essa variável-local é na verdade um objeto, por isso usamos **props.author** para ter acessa a propriedade do Child Component. 
