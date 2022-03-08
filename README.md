@@ -405,7 +405,7 @@ class App extends React.Component {
 Em Vanilla JavaScript, nós poderiamos fazer algo como:
 
 ```js
-this.state = position.coords.latitude
+this.state.let = position.coords.latitude
 ```
 
 Mas em React, usamos setState para isso acontecer.
