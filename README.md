@@ -18,8 +18,6 @@ Quando a linha de código **create-react-app** é executada, bibliotecas como We
 
 Ao terminar de configurar, teremos a seguinte estrutura de pastas:
 
-
-
 ```
 my-app/
 ├─ node_modules/
@@ -220,7 +218,7 @@ Com os três conceitos em mente, precisamos seguir algumas regras para isso acon
 2. Criar um novo arquivo para esse JSX com um nome **descritivo**, por exemplo, "CommentDetails" em **PascalCase**.
 3. Por último, fazer desse Component adaptável em novos contextos usando **Props**.
 
-Depois de levarmos em consideração os passos acima, podemos usar ES6 Modules para tornar disponível esse component para o ***index.js** e então ser renderizado pelo ReactDOM.
+Depois de levarmos em consideração os passos acima, podemos usar ES6 Modules para tornar disponível esse component para o **index.js** e então ser renderizado pelo ReactDOM.
 
 Components são tratados como JSX ou tags em React. Por exemplo:
 
@@ -233,7 +231,7 @@ const App = () => {
   );
 };
 ```
-**CommentDetails** é um component. Não confundir components com variáveis. Dessa forma também estamos fazendo **Nesting**
+**CommentDetails** é um component. Não confundir components com variáveis. Dessa forma também estamos fazendo **Nesting**.
 
 ### Props
 
@@ -336,3 +334,30 @@ const ApprovalCard = (props) => {
   );
 };
 ```
+
+## Components - Class Components e Function Components
+
+React atualmente é divido em duas formas:
+
+* **Class Components**: 
+                     1. pode produzir **JSX** para mostrar conteúdo para o usuário;
+                     2. pode usar o **Lifecycle Method** para rodar código em um momento especifico da aplicação;
+                     3. pode usar **State** para atualizar o conteúdo do usuário.
+                    
+* **Function Components**: 
+                     1. pode produzir **JSX** para mostrar conteúdo para o usuário;
+                     2. pode usar **Hooks** para rodar código em um momento especifico da aplicação;
+                     3. pode usar **Hooks** para atualizar o conteúdo do usuário.
+
+### Regras para construir Class Components
+
+* Deve ser uma **classe JavaScript**;
+* Deve ser uma **subclass** (extend) do React.Component;
+* Deve definir um método render que retorna **JSX**.
+
+#### Regras de State
+
+* State é um Objeto que contém dados relevantes para um Component e só pode ser usado em Class Components. 
+* Atualizar o "state" em um component causa a renderização desse componenet.
+* State deve ser iniciado quando o component é criado.
+* Além disso, **State só pode ser atualizado usando a função SETSTATE**.
