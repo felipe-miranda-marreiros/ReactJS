@@ -270,6 +270,8 @@ const CommentDetails = (props) => {
 
 Pelo fato de Components serem Funções, podemos passar nos parâmetros um variável-local chamada **props**. Essa variável-local é na verdade um objeto, por isso usamos **props.author** para ter acessa a propriedade do Child Component.
 
+#### Multiplos Props
+
 Levando em consideração que Props são objetos, podemos passar multiplas propriedades.
 
 ```js
@@ -293,4 +295,44 @@ const CommentDetails = (props) => {
 };
 ```
 
-**props.avatar, props.author, props.post, props.timeAgo** são multiplas propriedades sendo passadas para o component. 
+**props.avatar, props.author, props.post, props.timeAgo** são multiplas propriedades sendo passadas para o component.
+
+#### Props.Children
+
+Em JSX, expressões que contém opening tag e closing tag, o conteúdo dentro dessas tags é passado com um Prop especial: **props.children**.
+
+Um component que tem children elements (que possui outros components dentro) é sempre identificado com opening e closing tag.
+
+```js
+<ApprovalCard />
+```
+
+No exemplo acima, é um component com self-closing tag. Components podem ou não apresentar outros components dentro de si, pois React permite essa interação. Em outras palavras, no futuro esse component pode receber children elements.
+
+```js
+<ApprovalCard>
+        <CommentDetails
+          author="Sam"
+          timeAgo="Today at 4:45PM"
+          post="Nice blog post!"
+          avatar={faker.image.avatar()}
+        />
+</ApprovalCard>
+```
+Agora **ApprovalCard** possui um novo elemento chamado **CommentDetails**. Se quisermos que o conteúdo de **CommentDetails** seja exibido dentro do **ApprovalCard**, usamos props.children.
+
+```js
+const ApprovalCard = (props) => {
+  return (
+    <div className="ui card">
+      <div className="content">{props.children}</div>
+      <div className="extra content">
+        <div className="ui two buttons">
+          <div className="ui basic green button">Approve</div>
+          <div className="ui basic red button">Reject</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+```
