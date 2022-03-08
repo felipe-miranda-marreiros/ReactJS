@@ -381,7 +381,8 @@ class App extends React.Component {
   //Super Method
     super(props);
     
-    //A Criação do State e o dado que será relevante para criação desse Component. Nós colocamos a propriedade desse Objeto State como Null, pois não sabemos ainda o dado que irá ocupar essa propriedade.
+    //A Criação do State e o dado que será relevante para criação desse Component.
+    //Nós colocamos a propriedade desse Objeto State como Null, pois não sabemos ainda o dado que irá ocupar essa propriedade.
     this.state = { lat: null };
 
     window.navigator.geolocation.getCurrentPosition(
@@ -409,3 +410,17 @@ this.state.lat = position.coords.latitude
 ```
 
 Mas em React, usamos setState para isso acontecer.
+
+#### Component Lifecycle
+
+Components são estruturados da seguinte forma em Class Components:
+
+**constructor** - lugar responsável por iniciar métodos apenas uma vez.
+**render** - lugar responsável por apenas mostrar JSX.
+
+Cada component em React tem um ciclo de vida pelo  qual podemos monitorar e manipular durante suas três principais fases:
+
+**componentDidMount** -  lugar destinado para carregar dados.
+**componentDidUpdate** - lugar destinado para carregar mais dados quando state/props mudam.
+**componentWillUnmount** - lugar destinado para uso de bibliotecas externas.
+
