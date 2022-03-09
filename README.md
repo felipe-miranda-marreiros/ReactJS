@@ -99,7 +99,7 @@ No final, o que estaremos enviando para o navegador é uma versão do Babel de J
 ```html
 
 <h1>My Header</h1>
-<p>My paragraph>
+<p>My paragraph</p>
 <button>My button</button>
 ```
 
@@ -359,7 +359,7 @@ React atualmente é divido em duas formas:
 
 * Deve ser uma **classe JavaScript**;
 * Deve ser uma **subclass** (extend) do React.Component;
-* Deve definir um método render que retorna **JSX**.
+* Deve definir um método **render** que retorna **JSX**.
 
 #### Regras de State
 
@@ -415,7 +415,7 @@ Em Vanilla JavaScript, nós poderiamos fazer algo como:
 this.state.lat = position.coords.latitude
 ```
 
-Mas em React, usamos setState para isso acontecer.
+Mas em React, usamos **setState** para isso acontecer.
 
 #### Component Lifecycle
 
@@ -433,3 +433,8 @@ Cada component em React tem um ciclo de vida pelo  qual podemos monitorar e mani
 
 3. **componentWillUnmount** - lugar destinado para uso de bibliotecas externas.
 
+#### Benefícios de usar Class Components
+
+* Facilidade em organização de código;
+* Possui Lifecycle Events - facilitando processos quando o App é inicializado pela primeira vez;
+* Pode usar **state** - facilidade em lidar com User Input.
