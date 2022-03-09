@@ -1,8 +1,8 @@
-![image](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![image](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white) ![iamge](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) ![image](	https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white) ![image](https://img.shields.io/badge/Webpack-8DD6F9?style=for-the-badge&logo=Webpack&logoColor=white) ![image](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![image](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![image](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white) ![iamge](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) ![image](	https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white) ![image](https://img.shields.io/badge/Webpack-8DD6F9?style=for-the-badge&logo=Webpack&logoColor=white) ![image](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white) ![image](https://img.shields.io/badge/semantic%20ui%20react-35BDB2?style=for-the-badge&logo=semanticuireact&logoColor=white)
 
 # React JS
 
-Meus estudos com React JS. </br> Requisitos: HTML, CSS/SASS, ES6+.
+Minha documentação de React JS.
 
 ## Fundamentos - Criação de um novo ambiente
 
@@ -334,6 +334,7 @@ const ApprovalCard = (props) => {
   );
 };
 ```
+<hr>
 
 ## Components - Class Components e Function Components
 
@@ -438,3 +439,59 @@ Cada component em React tem um ciclo de vida pelo  qual podemos monitorar e mani
 * Facilidade em organização de código;
 * Possui Lifecycle Events - facilitando processos quando o App é inicializado pela primeira vez;
 * Pode usar **state** - facilidade em lidar com User Input.
+
+<hr>
+
+## Handling Events
+
+Handling Events em React é bastante similar com DOM Handling Events. A sintaxe, no entanto, muda:
+
+* Eventos em React são feitos em **camelCase**, enquanto em HTML são feitos em lowercase.
+
+```html
+<!-- HTML-->
+
+<button onclick="activateLasers()">
+  Activate Lasers
+</button>
+
+```
+* Com JSX, nós passamos uma função como Event Handler em vez de uma string.
+
+```js
+//React
+
+<button onClick={activateLasers}>
+  Activate Lasers
+</button>
+```
+
+Outro exemplo usando Class Component:
+
+```js
+
+class SearchBar extends React.Component {
+
+//Função que será passada como Callback Function
+  onInputChange(event) {
+    console.log(event.target.value);
+  }
+
+  render() {
+    return (
+      <div className="ui segment">
+        <form className="ui form">
+          <div className="field">
+            <label>Image Search</label>
+            
+            //Event Handle
+            <input type="text" onChange={this.onInputChange} />
+          </div>
+        </form>
+      </div>
+    );
+  }
+}
+```
+
+Podemos passar funções como Callback Functions no Event Handle.
