@@ -494,4 +494,46 @@ class SearchBar extends React.Component {
 }
 ```
 
-Podemos passar funções como Callback Functions no Event Handle.
+Podemos passar funções como Callback Functions no Event Handle diretamente no JSX com Arrow Function.
+
+```js
+
+<input type="text" onChange={(e) => console.log(e.target.value)}/>
+```
+
+### Controlled e Uncontrolled Elements
+
+* **Controlled Components** são aqueles que dados de um Form são manipulados pelo state do Component. Por exemplo:
+
+```js
+class SearchBar extends React.Component {
+
+{/* state (objeto) do component que guardará o valor do input*/}
+  state = { term: "" };
+
+  render() {
+    return (
+      <div className="ui segment">
+        <form className="ui form">
+          <div className="field">
+            <label>Image Search</label>
+            <input
+              type="text"
+              value={this.state.term}
+              
+              {/* Guardando o valor do input na propriedade term do state*/}
+              onChange={(e) => this.setState({ term: e.target.value })}
+            />
+          </div>
+        </form>
+      </div>
+    );
+  }
+}
+
+```
+
+Em vez do DOM controlar o valor do input. React salvará o valor no **state** e só React irá manipular esse valor, bem como futuramente validar.
+
+* **Uncontrolled Components** são iguais a Forms feitos em HTML tradicional. Nós não salvamos o valor de um input, por exemplo, em nenhum lugar do Component.
+
