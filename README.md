@@ -4,7 +4,7 @@
 
 É uma biblioteca do JavaScript para construir interfaces. Ela é composta pelos seguintes conceitos:
 
-* Declarativo: não precisamos nos preocupar com detalhes de como React mostrará as interfaces para o usuário.
+* Declarativo: não precisamos nos preocupar com detalhes de como React mostrará as interfaces para o usuário. <br>Isso quer dizer que eu posso dizer o que deve deve ser feito ao computador e ele irá garantir que os detalhes sejam feitos sem eu me preocupar.
 * Component-Based: cada parte de uma interface é feita pela reunião de components. Cada component possui seu próprio espaço, state e lógica.
 
 ## Fundamentos - Criação de um novo ambiente
@@ -361,6 +361,10 @@ React atualmente é divido em duas formas:
 2. pode usar **Hooks** para rodar código em um momento especifico da aplicação;
        
 3. pode usar **Hooks** para atualizar o conteúdo do usuário.
+
+Exemplo de Function Component:
+
+![image](https://user-images.githubusercontent.com/91689754/157948373-32138653-074f-408a-81b3-0b0a2ca49bdb.png)
 
 ### Regras para construir Class Components
 
