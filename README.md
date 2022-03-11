@@ -2,7 +2,10 @@
 
 # React JS
 
-Minha documentação de React JS.
+É uma biblioteca do JavaScript para construir interfaces. Ela é composta pelos seguintes conceitos:
+
+* Declarativo: não precisamos nos preocupar com detalhes de como React mostrará as interfaces para o usuário.
+* Component-Based: cada parte de uma interface é feita pela reunião de components. Cada component possui seu próprio espaço, state e lógica.
 
 ## Fundamentos - Criação de um novo ambiente
 
@@ -87,12 +90,15 @@ Eu pressumo que seja o mesmo que usar innerHTML.
 
 ```js
 const root = document.querySelector("#root");
-root.innerHTML = "<div>Hi there!</div>";
+let div = document.createElement("div");
+root.append(div);
 ```
 
 ## Fundamentos - O que é JSX?
 
 **JavaScript XML (JSX)** é uma forma de exibir templates para o desenvolvedor ter melhor compreensão do código que está sendo produzido. JSX permite inserir a mesma sintaxe do HTML no React, no entanto, essa sintaxe não é válida para navegadores e é aqui que Babel faz essa conversão. Babel não só converte JSX como também permite a conversão de ES6+ para ES5, permitindo que navegadores mais antigos possam reconhecer funcionalidades mais modernas do JavaScript.
+
+**Em resumo, JSX é uma função que retorna um objeto contendo propriedades relevantes para o React renderizar no navegador.**
 
 No final, o que estaremos enviando para o navegador é uma versão do Babel de JavaScript, pois os navegadores não reconhecem a sintaxe JSX.
 
