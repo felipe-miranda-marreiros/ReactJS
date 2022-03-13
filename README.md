@@ -4,8 +4,9 @@
 
 É uma biblioteca do JavaScript para construir interfaces. Ela é composta pelos seguintes conceitos:
 
-* Declarativo: não precisamos nos preocupar com detalhes de como React mostrará as interfaces para o usuário. <br>Isso quer dizer que eu posso dizer o que deve deve ser feito ao computador e ele irá garantir que os detalhes sejam feitos sem eu me preocupar.
-* Component-Based: cada parte de uma interface é feita pela reunião de components. Cada component possui seu próprio espaço, state e lógica.
+* **Declarativo**: nos permite criar interfaces sem nos preocupar em mexer com DOM diretamente. <br> Isso quer significa: não precisamos nos preocupar em dizer passo a passo como DOM deve se comportar quando construímos interfaces. Precisamos dizer apenas como o resultado será e não como chegar no resultado.
+
+* **Component-Based**: cada parte de uma interface é feita pela reunião de components. Cada component possui seu próprio espaço, state e lógica. Um component pode ser uma Classe ou Função.
 
 ## Fundamentos - Criação de um novo ambiente
 
@@ -37,7 +38,7 @@ my-app/
 ├─ README.md
 ```
 
-* **node_modules** é a pasta que contém todos as dependências do projeto.
+* **node_modules** é a pasta que contém todos as dependências do projeto com React e ReactDOM.
 * **public** é a pasta que guarda todos os arquivos estáticos como imagens, index.html. São arquivos que nunca serão alterados.
 * **src** é a pasta que nós colocamos todos os códigos fontes que escrevemos.
 * **package.json** é o arquivo JSON que grava todas as dependências e configura nossos projetos.
