@@ -38,7 +38,7 @@ my-app/
 ├─ README.md
 ```
 
-* **node_modules** é a pasta que contém todos as dependências do projeto com React e ReactDOM.
+* **node_modules** é a pasta que contém todos as dependências do projeto como React e ReactDOM.
 * **public** é a pasta que guarda todos os arquivos estáticos como imagens, index.html. São arquivos que nunca serão alterados.
 * **src** é a pasta que nós colocamos todos os códigos fontes que escrevemos.
 * **package.json** é o arquivo JSON que grava todas as dependências e configura nossos projetos.
