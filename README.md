@@ -353,7 +353,7 @@ A propriedade expenses[0].date será usada no atributo date do component **Expen
 
 ![Code_R1Zpig9B6X](https://user-images.githubusercontent.com/91689754/158264548-8f0359ab-b860-4913-831a-9ecd2ef85fa9.png)
 
-Agora que **props** possui o dado de **expenses[0].date**, podemos passar para outro component, **ExpenseDate**.
+Agora que **props** possui o dado de **expenses[0].date**, podemos passar para outro component, **ExpenseDate** como atributo também.
 
 ![image](https://user-images.githubusercontent.com/91689754/158265562-9906ce75-ea70-4876-9631-9bcba71841ec.png)
 
