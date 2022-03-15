@@ -564,3 +564,17 @@ Em vez do DOM controlar o valor do input. React salvará o valor no **state** e 
 
 * **Uncontrolled Components** são iguais a Forms feitos em HTML tradicional. Nós não salvamos o valor de um input, por exemplo, em nenhum lugar do Component.
 
+## Keys
+
+Key é a forma de identificar elementos únicos, permitindo que React observe qual elemento foi atualizado, adicionado ou removido. É usado quando criamos elementos dinamicamente como listas. Sem Keys, React pode confundir elementos e mutar incorretamente um elemento que não deveria. Além disso, Keys devem ser únicas e estáticos. 
+
+```
+Each child in a list should have a unique "key" prop.
+```
+
+O erro acima acontece em elementos quando Higher Order Array Methods são utilizados.
+
+![image](https://user-images.githubusercontent.com/91689754/158287168-92c2c720-62b7-4631-9d85-eb3d9103de9b.png)
+
+No exemplo acima, é utilizado index da array como key.
+
