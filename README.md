@@ -578,3 +578,10 @@ O erro acima acontece em elementos quando Higher Order Array Methods são utiliz
 
 No exemplo acima, é utilizado index da array como key.
 
+## Higher Order Array Methods em React
+
+Métodos como Map podem ser usados para exbir React Elements de maneira auto-sustentável, sem precisarmos adicionar elementos manualmente. Por exemplo, podemos converter uma array com dados relevantes em uma array de JSX.
+
+![image](https://user-images.githubusercontent.com/91689754/158598410-353c6e99-91b3-446f-b46a-9999506c8a0b.png)
+
+No exemplo acima, usamos Map no **jokesData** e retornamos um component **joke** com todas as informações relevantes, sem precisar repetir o código manualmente.
