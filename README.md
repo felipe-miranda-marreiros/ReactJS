@@ -370,6 +370,11 @@ React atualmente é divido em duas formas:
  2. pode usar o **Lifecycle Method** para rodar código em um momento especifico da aplicação;
 
  3. pode usar **State** para atualizar o conteúdo do usuário.
+
+Exemplo de Class Component:
+
+![image](https://user-images.githubusercontent.com/91689754/158881048-49225c05-cb21-4998-93c4-b6226ac93a49.png)
+
                     
 * **Function Components**:
 
