@@ -4,7 +4,7 @@
 
 É uma biblioteca do JavaScript para construir interfaces. Ela é composta pelos seguintes conceitos:
 
-* **Declarativo**: nos permite criar interfaces sem nos preocupar em mexer com DOM diretamente. <br> Isso quer significa: não precisamos nos preocupar em dizer passo a passo como DOM deve se comportar quando construímos interfaces. Precisamos dizer apenas como o resultado será e não como chegar no resultado.
+* **Declarativo**: nos permite criar interfaces sem nos preocupar em mexer com DOM diretamente. <br> Isso significa: não precisamos nos preocupar em dizer passo a passo como DOM deve se comportar quando construímos interfaces. Precisamos dizer apenas como o resultado será e não como chegar no resultado.
 
 * **Component-Based**: cada parte de uma interface é feita pela reunião de components. Cada component possui seu próprio espaço, state e lógica. Um component pode ser uma Classe ou Função.
 
