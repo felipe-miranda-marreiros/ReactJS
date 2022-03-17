@@ -450,6 +450,36 @@ this.state.lat = position.coords.latitude
 
 Mas em React, usamos **setState** para isso acontecer.
 
+Quando atualizamos State, nós estamos, na verdade, fazendo um Shallow Merge.
+
+Por exemplo, temos um State como:
+
+```js
+
+this.state = {
+      name: {
+        firstName: "Felipe",
+        lastName: "Miranda",
+      },
+ }; 
+```
+
+Se usarmos setState para atualizar:
+
+```js
+
+this.setState({ name: "Paulo" })
+
+```
+
+Fazendo isso, estaremos sobrescrevendo State completamente, ocasionando erro. Se quisermos mudar a propriedade firstName:
+
+```js
+
+this.setState({ name: { firstName: "Paulo" } })
+
+```
+
 #### Component Lifecycle
 
 Components são estruturados da seguinte forma em Class Components:
