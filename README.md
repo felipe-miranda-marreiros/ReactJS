@@ -110,6 +110,10 @@ No final, o que estaremos enviando para o navegador é uma versão do Babel de J
 <button>My button</button>
 ```
 
+### Extensão JS vs JSX
+
+**JSX** não é uma extensão padrão do JavaScript. Nós usamos .JSX como extensão para componentes, enquanto .JS pode ser usado para aplicações. Não há diferença entre JSX e JS, pois no final ambos irão mostrar o mesmo resultado. É só uma questão de organização de arquivos. Em outras palavras, nomeamos arquivos JSX aqueles componentes que retornam JSX.
+
 ### JSX com Inline Style e Internal Style
 
 Mesmo que JSX se assemelhe com HTML, funções como Inline Style ou Internal Style não funcionarão da mesma forma em React. Existe também uma diferença de sintaxe quando o assunto é styling. A mesma coisa acontece com a atribuíção de Classes. Todos possuem sintaxe diferentes do padrão HTML.
