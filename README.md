@@ -621,6 +621,11 @@ Métodos como Map podem ser usados para exbir React Elements de maneira auto-sus
 
 No exemplo acima, usamos Map no **jokesData** e retornamos um component **joke** com todas as informações relevantes, sem precisar repetir o código manualmente.
 
+Outro exemplo com busca dinamica usando Filter e Map.
+
+![image](https://user-images.githubusercontent.com/91689754/159017370-6df9f1e6-a058-4a7e-b1b6-31b10506f357.png)
+
+
 ## Conditional Rendering com Short Circuit
 
 É possível renderizar partes de um component ou todo um component dependendo do estado da aplicação. Para isso, usamos Conditional Rendering com Short Circuit.
