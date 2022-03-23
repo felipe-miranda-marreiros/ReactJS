@@ -637,3 +637,26 @@ Outro exemplo com busca dinamica usando Filter e Map.
 ![image](https://user-images.githubusercontent.com/91689754/158688169-a58c935f-5375-44d5-a587-68c47ef32764.png)
 
 Colocamos o elemento dentro de chaves e usamos uma condição.
+
+## Hooks
+
+Hooks fazem parte do React moderno. Funcionam com Function Components. Diferente de Class Component que a gente pode construir state como um objeto, em Hooks podemos usar array.
+
+### useState
+
+É a forma de controlar e gerenciar os valores usados pelo component. São considerados dados mutável.
+
+**useState** retorna uma array. Essa array contém um valor e uma função. A função é responsável por mudar o estado do valor.
+
+```js
+    const [count, setCount] = React.useState(0);
+    
+    function add() {
+        setCount(prevCount => prevCount + 1);
+    }
+```
+
+No exemplo acima, usamos Destructuring assignment no useState. **setCount** é a função responsável por mudar o valor(no caso, **count**).
+
+Como boa prática, usamos uma Callback Function na função fornecida pelo **useState**. A razão é que se quisermos modificar o state atual, mas
+ainda ter acesso ao valor antigo, usamos uma Callback Function para usar o valor prévido do state. Se o valor prévio de state era 0 e agora queremos mudar para 1, por exemplo, podemos ter acesso ao valor antigo e o novo.
