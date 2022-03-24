@@ -660,3 +660,35 @@ No exemplo acima, usamos Destructuring assignment no useState. **setCount** é a
 
 Como boa prática, usamos uma Callback Function na função fornecida pelo **useState**. A razão é que se quisermos modificar o state atual, mas
 ainda ter acesso ao valor antigo, usamos uma Callback Function para usar o valor prévido do state. Se o valor prévio de state era 0 e agora queremos mudar para 1, por exemplo, podemos ter acesso ao valor antigo e o novo.
+
+#### useState com Arrays
+
+Podemos usar useState com Arrays como no exemplo abaixo.
+
+```js
+const [arrayThing, setArrayThing] = useState(["Thing 1", "Thing 2"])
+
+setArrayThing(()=> [...arrayThing, "Thing 3"])
+```
+
+Usamos Spread Operator para adicionar um novo elemento na Array que está no useState do component.
+
+#### useState com Objetos
+
+Podemos usar useState com Objetos como no exemplo abaixo.
+
+```js
+const [objectThing, setObjectThing] = useState({
+  item1: "Thing 1",
+  item2: "Thing 2",
+})
+
+setObjectThing(()=> {
+  return {
+    ...objectThing,
+    item3: "Thing 3"
+  }
+})
+```
+
+Usamos Spread Operator para adicionar um novo elemento no Objeto que está no useState do component.
