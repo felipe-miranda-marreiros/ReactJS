@@ -636,7 +636,7 @@ Outro exemplo com busca dinamica usando Filter e Map.
 
 ![image](https://user-images.githubusercontent.com/91689754/158688169-a58c935f-5375-44d5-a587-68c47ef32764.png)
 
-Colocamos o elemento dentro de chaves e usamos uma condição.
+Colocamos o elemento dentro de chaves e usamos uma condição. Isso funciona porque o operador && (AND) verifica o primeiro item da condição, se for verdadeiro, a expressão toda é executada.
 
 ## Hooks
 
