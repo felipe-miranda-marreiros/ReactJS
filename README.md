@@ -601,6 +601,12 @@ class SearchBar extends React.Component {
 
 Em vez do DOM controlar o valor do input. React salvará o valor no **state** e só React irá manipular esse valor, bem como futuramente validar.
 
+Outro exemplo usando Function Component:
+
+![image](https://user-images.githubusercontent.com/91689754/161120181-917cd4c8-8448-494d-b268-aa9d7fa8d73b.png)
+
+Utilizamos o atributo **value** para dizer que é um ambiente controlado.
+
 * **Uncontrolled Components** são iguais a Forms feitos em HTML tradicional. Nós não salvamos o valor de um input, por exemplo, em nenhum lugar do Component.
 
 ## Keys
