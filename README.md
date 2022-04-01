@@ -699,7 +699,7 @@ setObjectThing(()=> {
 
 Usamos Spread Operator para adicionar um novo elemento no Objeto que está no useState do component.
 
-#### useEffect e API Calls
+### useEffect e API Calls
 
 Não podemos simplesmente, por exemplo, usar Fetch API e salvar os dados no useState do componente. Considerando que Fetch não é provido pelo JavaScript, mas pelo Web API, React passa por um processo de loop infinito toda vez que passarmos o conteúdo do Fetch para o useState. Em outras palavras, por estar em loop, o componente é constantemente renderizado.
 
