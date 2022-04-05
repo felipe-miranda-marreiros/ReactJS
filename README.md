@@ -704,3 +704,26 @@ Usamos Spread Operator para adicionar um novo elemento no Objeto que está no us
 Não podemos simplesmente, por exemplo, usar Fetch API e salvar os dados no useState do componente. Considerando que Fetch não é provido pelo JavaScript, mas pelo Web API, React passa por um processo de loop infinito toda vez que passarmos o conteúdo do Fetch para o useState. Em outras palavras, por estar em loop, o componente é constantemente renderizado.
 
 Fetch(data) > useState > Render > Fetch(data) > useState > Re-render
+
+Dessa forma, usamos useEffect para determinar um código que afeta a renderização do React. Isso pode ser manipulação do **LocalStorage**, **API**, **WebSockets**, **Dois States que precisam estar sincronizados**.
+
+#### useEffect e Renderização
+
+Quando o componente é carregado ou na primeira renderização, useEffect é chamado automaticamente, se não houver Dependency Array. Caso contrário, se houver Dependency Array, useEffect não será chamado automaticamente, mas de acordo com a dependência estabelecida pelo desenvolvedor.
+
+#### Dependecies Array
+
+É a forma do React saber quando deverá chamar useEffect. Sem isso, React permanecerá no loop. Precisamos passar, no final da sintaxe do useEffect, uma Array que diga qual elemento deve ser observado e, de acordo com a comparação feita, useEffect será chamado corretamente.
+
+Exemplo com useEffect e useState:
+
+```js
+const [formsErrors, setFormErrors] = useState({});
+
+useEffect(()=>{
+  
+  
+}, [formErrors])
+```
+
+A dependência será **formErrors**, de acordo com seu estado.
