@@ -727,3 +727,24 @@ useEffect(()=>{
 ```
 
 A dependência será **formErrors**, de acordo com seu estado.
+
+#### useEffect e Fetch
+
+Como dito anteriormente, não podemos simplesmnete usar Fetch para salvar dados no useState. Para isso, usamos useEffect prosseguido de uma Callback Function.
+
+![image](https://user-images.githubusercontent.com/91689754/161870380-5a9da26b-86e1-4246-a162-af45304c4e03.png)
+
+No exemplo acima, usamos Then. **setAllMemeImages** será a função do useState do componente. Dessa forma podemos fazer corretamente o uso de Fetch. A **Dependency Array** está vázia porque o useEffect em questão não precisa observar nada. Apenas carregar os dados da API para o useState.
+
+#### useEffect e Async Functions
+
+Podemos usar Async Functions com useEffect, porém precisamos nos atentar para alguns requisitos.
+
+![image](https://user-images.githubusercontent.com/91689754/161870931-d12a371e-cd62-4504-b59f-7a26ad849a54.png)
+
+Eles são:
+
+1. Construir uma Async Function dentro do useEffect;
+2. Invocar essa função depois.
+
+Esses requisitos são apenas necessários para Async Functions.
