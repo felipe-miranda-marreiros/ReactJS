@@ -699,6 +699,13 @@ setObjectThing(()=> {
 
 Usamos Spread Operator para adicionar um novo elemento no Objeto que está no useState do component.
 
+#### useState com LocalStorage e Lazy State
+
+Dependendo do tipo de dado que será salvo no LocalStorage, podemos usar useEffect e useState para mostrar ou salvar dados.
+
+![image](https://user-images.githubusercontent.com/91689754/164895960-2e166dac-de77-4bed-8608-ffcfc317bf72.png)
+
+
 ### useEffect e API Calls
 
 Não podemos simplesmente, por exemplo, usar Fetch API e salvar os dados no useState do componente. Considerando que Fetch não é provido pelo JavaScript, mas pelo Web API, React passa por um processo de loop infinito toda vez que passarmos o conteúdo do Fetch para o useState. Em outras palavras, por estar em loop, o componente é constantemente renderizado.
